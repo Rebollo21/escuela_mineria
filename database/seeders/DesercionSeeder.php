@@ -15,6 +15,9 @@ class DesercionSeeder extends Seeder
 {
     public function run(): void
     {
+        $faker = \Faker\Factory::create('es_ES');
+        $faker->seed(12345);
+
         // 1. Crear Carreras
         $carreras = [
             Carrera::create(['nombre' => 'Ciencias de la Informática', 'clave' => 'LCI']),
